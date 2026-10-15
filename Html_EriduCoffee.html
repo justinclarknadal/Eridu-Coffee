@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eridu Coffee // New Eridu Archival Log</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_eriducoffee.css">
+</head>
+<body>
+    <!-- Screen effect used for the terminal look -->
+    <div class="crt-overlay" aria-hidden="true"></div>
+
+    <div class="terminal-container">
+        <!-- Terminal status bar -->
+        <header class="terminal-header">
+            <div class="header-left">
+                <span class="orange-square">■</span>
+                <span class="header-log">// NEW ERIDU ARCHIVAL LOG //</span>
+            </div>
+            <div class="header-right">
+                <span class="secure-conn">SECURE CONNECTION // PROXY_LVL_4</span>
+                <span class="cctv-tag" id="cctv-tag">CCTV_S6_CAM_01</span>
+                <span class="sys-status">[SYS_OK: 100%]</span>
+                <span class="timestamp" id="timestamp">2026-03-12 04:32:15 UTC</span>
+            </div>
+        </header>
+
+        <!-- JavaScript displays the selected archive frame here -->
+        <main id="frame-viewport" class="frame-viewport" aria-label="New Eridu archive content">
+        </main>
+
+        <!-- Frame navigation -->
+        <footer class="terminal-footer">
+            <div class="footer-left">
+                <span class="footer-note" id="footer-note">// END OF ARCHIVE REPLAY //</span>
+            </div>
+            <div class="footer-nav">
+                <button type="button" class="nav-btn" id="prev-btn" onclick="changeFrame(-1)">◄ PREV LOG</button>
+                <div class="frame-indicators" id="frame-indicators">
+                </div>
+                <button type="button" class="nav-btn" id="next-btn" onclick="changeFrame(1)">NEXT LOG ►</button>
+            </div>
+            <div class="footer-right">
+                <span class="footer-location">6TH STREET LOGISTICS DIV.</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Order confirmation dialog -->
+    <div id="order-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-heading" aria-hidden="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-heading">[TRANSMISSION_STAMP] // PROXY ORDER TERMINAL</span>
+                <button type="button" class="close-modal" aria-label="Close order dialog" onclick="closeOrderModal()">[X]</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="java_eriducoffee.js"></script>
+</body>
+</html>
